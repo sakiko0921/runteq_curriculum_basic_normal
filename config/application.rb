@@ -33,5 +33,13 @@ module V3BasicRailsBasic
 
     # Don't generate system test files.
     config.generators.system_tests = nil
+    config.generators do |g|
+      # helperファイルの設定
+      g.helper false
+      # testファイルの設定
+      g.test false
+      # ルーティングの記述の設定
+      g.skip_routes true
+    end
   end
 end
