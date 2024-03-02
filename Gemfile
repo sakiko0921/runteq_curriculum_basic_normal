@@ -39,11 +39,14 @@ gem "jsbundling-rails"
 # gem "sassc-rails"
 gem "dartsass-rails", "~> 0.4.0"
 
-#Gem sourcery ver.0.16.3
+#STEP3
 gem "sorcery", "0.16.3"
 
-#i18n
+#STEP4
 gem 'rails-i18n', '~> 7.0.0'
+
+#STEP6
+gem 'draper', '4.0.2'
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
