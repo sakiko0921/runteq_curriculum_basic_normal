@@ -1,4 +1,7 @@
 ja:
+  defaults:
+    flash_message:
+      require_login: ログインしてください
   helpers:
     submit:
       create: 登録
@@ -33,4 +36,7 @@ ja:
     create:
       success: ユーザー登録が完了しました
       failure: ユーザー登録に失敗しました
+  time:
+    formats:
+      default: "%Y/%m/%d %H:%M:%S"
   

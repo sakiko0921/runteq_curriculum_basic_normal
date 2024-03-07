@@ -48,6 +48,9 @@ gem 'rails-i18n', '~> 7.0.0'
 #STEP6
 gem 'draper', '4.0.2'
 
+#STEP7
+gem 'faker'
+
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
 
