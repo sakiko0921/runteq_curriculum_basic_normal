@@ -36,6 +36,10 @@ ja:
     create:
       success: ユーザー登録が完了しました
       failure: ユーザー登録に失敗しました
+  boards:
+    create:
+      success: 掲示板を作成しました
+      failure: 掲示板を作成出来ませんでした
   time:
     formats:
       default: "%Y/%m/%d %H:%M:%S"
