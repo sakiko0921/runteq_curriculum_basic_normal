@@ -17,6 +17,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_03_09_072056) do
     t.string "title", null: false
     t.text "body", null: false
     t.bigint "user_id"
+    t.string "board_image"
     t.index ["user_id"], name: "index_boards_on_user_id"
   end
 

@@ -2,7 +2,7 @@
   <div class="row">
     <div class="col-lg-8 offset-lg-2">
       <h1><%= t('header.create_board') %></h1>
-      <%= form_with model: @board do |b| %>
+      <%= form_with model:@board do |b| %>
         <%= render "shared/error_messages", object: b.object %>
         <div class="new_board">
           <div class="mb-3">
@@ -12,6 +12,10 @@
           <div class="mb-3">
             <%= b.label :body %>
             <%= b.text_area :body, size: "200x10",class: "form-control" %>
+          </div>
+          <div class="mb-3">
+            <%= b.label :board_image %>
+            <%= b.file_field :board_image, class: "form-control" %>
           </div>
           <%= b.submit t('helpers.submit.create'), class: "btn btn-primary" %>
         </div>
