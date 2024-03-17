@@ -1,24 +1,23 @@
 <div class="container">
   <div class="row">
     <div class="col-lg-8 offset-lg-2">
-      <h1><%= t('header.create_board') %></h1>
-      <%= form_with model:@board do |b| %>
-        <%= render "shared/error_messages", object: b.object %>
-        <div class="new_board">
-          <div class="mb-3">
-            <%= b.label :title %>
-            <%= b.text_field :title, class: "form-control" %>
-          </div>
-          <div class="mb-3">
-            <%= b.label :body %>
-            <%= b.text_area :body, size: "200x10",class: "form-control" %>
-          </div>
-          <div class="mb-3">
-            <%= b.label :board_image %>
-            <%= b.file_field :board_image, class: "form-control" %>
-          </div>
-          <%= b.submit t('helpers.submit.create'), class: "btn btn-primary" %>
+      <h1><%= t('.title') %></h1>
+      <%= form_with model:@board, class: "new_board" do |f| %>
+        <%= render 'shared/error_messages', object: f.object %>
+        <div class="mb-3">
+          <%= f.label :title %>
+          <%= f.text_field :title, class: "form-control" %>
         </div>
+        <div class="mb-3">
+          <%= f.label :body %>
+          <%= f.text_area :body, rows: "10",class: "form-control" %>
+        </div>
+        <div class="mb-3">
+          <%= f.label :board_image %>
+          <%= f.file_field :board_image, class: "form-control" %>
+          <%= f.hidden_field :board_image_cache %>
+        </div>
+        <%= f.submit t('helpers.submit.create'), class: "btn btn-primary" %>
       <% end %>
     </div>
   </div>
