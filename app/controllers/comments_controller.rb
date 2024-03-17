@@ -1,4 +1,4 @@
-class CommentsController < ApplicationController	
+class CommentsController < ApplicationController
   def create
     comment = current_user.comments.build(comment_params)
     if comment.save
@@ -11,6 +11,6 @@ class CommentsController < ApplicationController
   private
 
   def comment_params
-		params.require(:comment).permit(:body).merge(board_id: params[:board_id])
+    params.require(:comment).permit(:body).merge(board_id: params[:board_id])
   end
 end
