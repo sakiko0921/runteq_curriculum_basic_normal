@@ -40,7 +40,7 @@ ja:
       success: ユーザー登録が完了しました
       failure: ユーザー登録に失敗しました
   boards:
-    new:
+    index:
       title: 掲示板作成
     show:
       title: 掲示板詳細
@@ -50,4 +50,3 @@ ja:
   time:
     formats:
       short: "%Y/%m/%d %H:%M:%S"
-  
