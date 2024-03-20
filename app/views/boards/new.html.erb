@@ -1,7 +1,8 @@
+<% content_for :title, '掲示板作成' %>
 <div class="container">
   <div class="row">
     <div class="col-lg-8 offset-lg-2">
-      <h1><%= t('.title') %></h1>
+      <h1><%= content_for :title %></h1>
       <%= form_with model:@board, class: "new_board" do |f| %>
         <%= render 'shared/error_messages', object: f.object %>
         <div class="mb-3">
