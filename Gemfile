@@ -55,7 +55,9 @@ gem 'faker'
 gem 'carrierwave', '~> 2.2.2'
 
 #debug tools
-gem 'pry-rails'
+group :development do
+  gem 'pry-byebug'
+end
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"

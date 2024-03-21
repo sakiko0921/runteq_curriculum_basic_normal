@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
   resources :users, only: %i[new create]
-  
-  resources :boards, only: %i[index new create show] do
+
+  resources :boards, only: %i[index new create show edit update destroy] do
     resources :comments, only: %i[create edit destroy], shallow: true
   end
   root "static_pages#top"
@@ -15,5 +15,5 @@ Rails.application.routes.draw do
   post '/login', to: 'user_sessions#create'
   #ログアウトは
   delete '/logout', to: 'user_sessions#destroy'
-  
+
 end

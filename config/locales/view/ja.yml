@@ -1,10 +1,14 @@
 ja:
   defaults:
+    create: 作成
     post: 投稿
     flash_message:
       created: "%{item}を作成しました"
       not_created: "%{item}を作成出来ませんでした"
       require_login: ログインしてください
+      updated: "%{item}を更新しました"
+      not_updated: "%{item}を更新出来ませんでした"
+      deleted: "%{item}を削除しました"
   helpers:
     submit:
       create: 登録
@@ -40,13 +44,19 @@ ja:
       success: ユーザー登録が完了しました
       failure: ユーザー登録に失敗しました
   boards:
-    index:
+    new:
       title: 掲示板作成
+    index:
+      title: 掲示板一覧
     show:
       title: 掲示板詳細
     create:
       success: 掲示板を作成しました
       failure: 掲示板を作成出来ませんでした
+    edit:
+      title: 掲示板編集
+    board:
+      confirm: 削除しますか?
   time:
     formats:
       short: "%Y/%m/%d %H:%M:%S"
