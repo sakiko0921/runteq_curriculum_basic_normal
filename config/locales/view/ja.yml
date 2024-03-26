@@ -48,6 +48,7 @@ ja:
       title: 掲示板作成
     index:
       title: 掲示板一覧
+      no_boards: 掲示板がありません
     show:
       title: 掲示板詳細
     create:
@@ -57,6 +58,11 @@ ja:
       title: 掲示板編集
     board:
       confirm: 削除しますか?
+    bookmarks:
+      no_bookmark: ブックマーク中の掲示板がありません
+  bookmarks:
+    create: ブックマークしました
+    destroy: ブックマークを外しました
   time:
     formats:
       short: "%Y/%m/%d %H:%M:%S"

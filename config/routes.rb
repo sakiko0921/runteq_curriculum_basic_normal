@@ -4,7 +4,11 @@ Rails.application.routes.draw do
 
   resources :boards, only: %i[index new create show edit update destroy] do
     resources :comments, only: %i[create edit destroy], shallow: true
+    get :bookmarks, on: :collection
   end
+
+  resources :bookmarks, only: %i[create destroy]
+
   root "static_pages#top"
   # Defines the root path route ("/")
   # root "articles#index"
