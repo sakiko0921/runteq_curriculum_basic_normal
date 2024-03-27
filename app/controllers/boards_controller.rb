@@ -1,6 +1,6 @@
 class BoardsController < ApplicationController
   def index
-    @boards = Board.includes(:user)
+    @boards = Board.includes(:user).order(created_at: :desc)
   end
 
   def show
