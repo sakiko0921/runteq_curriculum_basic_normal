@@ -1,11 +1,17 @@
 class CommentsController < ApplicationController
   def create
-    comment = current_user.comments.build(comment_params)
-    if comment.save
-      redirect_to board_path(comment.board), success: t('defaults.flash_message.created', item: Comment.model_name.human)
+    @comment = current_user.comments.build(comment_params)
+    if @comment.save
+      redirect_to board_path(@comment.board)
     else
-      redirect_to board_path(comment.board), danger: t('defaults.flash_message.not_created', item: Comment.model_name.human)
+      redirect_to board_path(@comment.board), danger: t('defaults.flash_message.require_fill', item: Comment.model_name.human)
     end
+  end
+
+  def destroy
+    @comment = current_user.comments.find(params[:id])
+    @comment.destroy!
+    redirect_to board_path(@comment.board), status: :see_other
   end
 
   private

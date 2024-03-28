@@ -10,22 +10,22 @@
         <h3 class="small"><%= comment.user.decorate.full_name %></h3>
         <%= simple_format(comment.body) %>
       </td>
-      <% if current_user.own?(comment) %>
         <td class="action">
           <ul class="list-inline justify-content-center" style="float: right;">
+          <% if current_user.own?(comment) %>
             <li class="list-inline-item">
               <%= link_to "#", class: 'edit-comment-link' do %>
                 <i class='bi bi-pencil-fill'></i>
               <% end %>
             </li>
             <li class="list-inline-item">
-              <%= link_to "#", class: 'delete-comment-link' do %>
+              <%= link_to comment_path(comment), class: 'delete-comment-link', data: { turbo_method: :delete, turbo_confirm: t('boards.board.confirm') } do %>
                 <i class="bi bi-trash-fill"></i>
               <% end %>
             </li>
+          <% end %>
           </ul>
         </td>
-      <% end %>
     </tr>
   </div>
 </div>

@@ -5,6 +5,7 @@ ja:
     flash_message:
       created: "%{item}を作成しました"
       not_created: "%{item}を作成出来ませんでした"
+      require_fill: "%{item}を入力してください"
       require_login: ログインしてください
       updated: "%{item}を更新しました"
       not_updated: "%{item}を更新出来ませんでした"
