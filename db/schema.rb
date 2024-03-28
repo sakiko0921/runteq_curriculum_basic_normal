@@ -10,19 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2024_03_28_082151) do
+ActiveRecord::Schema[7.0].define(version: 2024_03_28_084451) do
   create_table "boards", charset: "utf8mb4", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "user_id", null: false
-    t.string "title", null: false
-    t.text "body", null: false
+    t.bigint "user_id"
+    t.string "title"
+    t.text "body"
     t.index ["user_id"], name: "fk_rails_0732f8ef3d"
   end
 
   create_table "bookmarks", charset: "utf8mb4", force: :cascade do |t|
-    t.bigint "user_id", null: false
-    t.bigint "board_id", null: false
+    t.bigint "user_id"
+    t.bigint "board_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["board_id"], name: "index_bookmarks_on_board_id"
