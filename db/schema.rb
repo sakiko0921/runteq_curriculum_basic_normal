@@ -10,15 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2024_03_26_113344) do
+ActiveRecord::Schema[7.0].define(version: 2024_03_28_082151) do
   create_table "boards", charset: "utf8mb4", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "user_id", null: false
     t.string "title", null: false
     t.text "body", null: false
-    t.bigint "user_id"
-    t.string "board_image"
-    t.index ["user_id"], name: "index_boards_on_user_id"
+    t.index ["user_id"], name: "fk_rails_0732f8ef3d"
   end
 
   create_table "bookmarks", charset: "utf8mb4", force: :cascade do |t|
