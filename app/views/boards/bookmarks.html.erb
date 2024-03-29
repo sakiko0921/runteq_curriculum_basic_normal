@@ -16,6 +16,7 @@
       <div class="row">
         <% if @bookmark_boards.present? %>
             <%= render @bookmark_boards %>
+            <%= paginate @bookmark_boards, theme: 'bootstrap-5' %>
         <% else %>
           <div class="mb-3"><%= t('.no_bookmark') %></div>
         <% end %>

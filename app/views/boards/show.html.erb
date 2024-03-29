@@ -32,14 +32,16 @@
       </article>
     </div>
   </div>
-  <%= render 'comments/form', comment: @comment, board: @board %>
-  <div class='row'>
-    <div class="col-lg-8 offset-lg-2">
-      <table class="table" id="table-comment">
-        <tbody>
+
+  <%= render 'comments/form', { comment: @comment, board: @board } %>
+
+  <div class="col-lg-8 offset-lg-2">
+    <table class="table">
+      <tbody id="table-comment">
+        <% if @comment.present? %>
           <%= render @comments %>
-        </tbody>
-      </table>
-    </div>
+        <% end %>
+      </tbody>
+    </table>
   </div>
 </div>

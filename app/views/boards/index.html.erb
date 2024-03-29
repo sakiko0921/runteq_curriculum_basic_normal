@@ -18,6 +18,9 @@
           <% @boards.each do |board| %>
             <%= render partial: 'boards/board', locals: { board: board } %>
           <% end %>
+          <div class="col-12">
+            <%= paginate @boards, theme: 'bootstrap-5' %>
+          </div>
         <% else %>
           <div class="mb-3"><%= t('.no_boards') %></div>
         <% end %>
