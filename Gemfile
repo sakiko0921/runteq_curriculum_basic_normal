@@ -66,6 +66,9 @@ gem 'turbo-rails', "1.1.1"
 gem 'kaminari', "1.2.2"
 gem 'bootstrap5-kaminari-views'
 
+#STEP18
+gem 'ransack', "3.2.1"
+
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
 

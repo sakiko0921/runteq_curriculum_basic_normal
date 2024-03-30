@@ -2,6 +2,7 @@ ja:
   defaults:
     create: 作成
     post: 投稿
+    search_word: 検索ワード
     flash_message:
       created: "%{item}を作成しました"
       not_created: "%{item}を作成出来ませんでした"
@@ -60,7 +61,8 @@ ja:
     board:
       confirm: 削除しますか?
     bookmarks:
-      no_bookmark: ブックマーク中の掲示板がありません
+      title: ブックマーク一覧
+      no_result: ブックマーク中の掲示板がありません
   bookmarks:
     create: ブックマークしました
     destroy: ブックマークを外しました
