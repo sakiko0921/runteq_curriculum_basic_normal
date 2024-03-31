@@ -48,7 +48,7 @@ class AvatarUploader < CarrierWave::Uploader::Base
   end
 
   def content_type_allowlist
-    /image\//
+    %r{image\/}
   end
 
   def cache_dir
