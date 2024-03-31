@@ -66,6 +66,14 @@ ja:
   bookmarks:
     create: ブックマークしました
     destroy: ブックマークを外しました
+  profiles:
+    edit:
+      title: プロフィール編集
+    show:
+      title: プロフィール
+      email: メールアドレス
+      full_name: 氏名
+      avatar: アバター
   time:
     formats:
       short: "%Y/%m/%d %H:%M:%S"

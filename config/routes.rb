@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+  # Defines the root path route ("/")
+  # root "articles#index"
+  root "static_pages#top"
+
   resources :users, only: %i[new create]
 
   resources :boards, only: %i[index new create show edit update destroy] do
@@ -9,9 +13,7 @@ Rails.application.routes.draw do
 
   resources :bookmarks, only: %i[create destroy]
 
-  root "static_pages#top"
-  # Defines the root path route ("/")
-  # root "articles#index"
+  resource :profile, only: %i[show edit update]
 
   #ログインするとuser_sessionsのnewアクションにいく
   get '/login', to: 'user_sessions#new'
