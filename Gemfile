@@ -54,11 +54,6 @@ gem 'faker'
 #STEP10
 gem 'carrierwave', '~> 2.2.2'
 
-#debug tools
-group :development do
-  gem 'pry-byebug'
-end
-
 #STEP15
 gem 'turbo-rails', "1.1.1"
 
@@ -68,6 +63,9 @@ gem 'bootstrap5-kaminari-views'
 
 #STEP18
 gem 'ransack', "3.2.1"
+
+#STEP20
+gem 'config'
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
@@ -83,6 +81,7 @@ group :development, :test do
   gem "rubocop-checkstyle_formatter"
   gem "rspec-rails"
   gem "rspec_junit_formatter"
+  gem 'letter_opener_web', '~> 2.0'
 end
 
 group :development do
@@ -91,7 +90,7 @@ group :development do
 
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
   # gem "rack-mini-profiler"
-
+  gem 'pry-byebug'
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
 end
