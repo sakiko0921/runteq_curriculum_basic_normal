@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2024_04_02_140357) do
+ActiveRecord::Schema[7.0].define(version: 2024_04_02_143028) do
   create_table "boards", charset: "utf8mb4", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -56,7 +56,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_04_02_140357) do
     t.integer "access_count_to_reset_password_page", default: 0
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["email"], name: "unique_index_users_email", unique: true
-    t.index ["reset_password_token"], name: "index_users_on_reset_password_token"
+    t.index ["reset_password_token"], name: "index_users_on_reset_password_token_unique", unique: true
   end
 
   add_foreign_key "boards", "users"
