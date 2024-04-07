@@ -27,4 +27,13 @@ Rails.application.routes.draw do
   #ログアウトは
   delete '/logout', to: 'user_sessions#destroy'
 
+  #adminページのルーティング
+  namespace :admin do
+    root 'dashboards#index'
+    resource :dashboard, only: %i[index]
+    get '/login', to: 'sessions#new', :as => :login
+    post '/login', to: 'sessions#create'
+    delete '/logout', to: 'sessions#destroy', :as => :logout
+  end
+
 end

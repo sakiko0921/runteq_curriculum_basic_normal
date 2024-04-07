@@ -9,6 +9,7 @@ ja:
       not_created: "%{item}を作成出来ませんでした"
       require_fill: "%{item}を入力してください"
       require_login: ログインしてください
+      not_authorized: 権限がありません
       updated: "%{item}を更新しました"
       not_updated: "%{item}を更新出来ませんでした"
       deleted: "%{item}を削除しました"
@@ -28,6 +29,19 @@ ja:
     create_board: 掲示板作成
     bookmark_index: ブックマーク一覧
     profile: プロフィール
+  admin:
+    sessions:
+      new:
+        title: ログイン
+        login: ログイン
+      create:
+        success: ログインしました
+        failure: ログインに失敗しました
+      destroy:
+        success: ログアウトしました
+    dashboards:
+      index:
+        title: ダッシュボード
   user_sessions:
     new:
       title: ログイン
