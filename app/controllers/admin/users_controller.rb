@@ -6,9 +6,6 @@ class Admin::UsersController < Admin::BaseController
 
   def show
     @user = User.find_by(id: params[:id])
-    unless @user
-      redirect_to admin_users_path, alert: 'ユーザーが見つかりません'
-    end
   end
 
   def edit
@@ -18,7 +15,7 @@ class Admin::UsersController < Admin::BaseController
   def update
     @user = User.find_by(id: params[:id])
     if @user.update(user_params)
-      redirect_to admin_user_path(@user), notice: 'ユーザーを更新しました'
+      redirect_to admin_user_path(@user), success: t('defaults.flash_message.updated', item: User.model_name.human)
     else
       flash.now['danger'] = t('defaults.flash_message.not_updated', item: User.model_name.human)
       render :edit
@@ -28,7 +25,7 @@ class Admin::UsersController < Admin::BaseController
   def destroy
     user = User.find_by(id: params[:id])
     user.destroy!
-    redirect_to admin_users_path, notice: 'ユーザーを削除しました', status: :see_other
+    redirect_to admin_users_path, success: t('defaults.flash_message.deleted', item: User.model_name.human), status: :see_other
   end
 
   private
