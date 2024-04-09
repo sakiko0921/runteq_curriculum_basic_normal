@@ -1,9 +1,14 @@
 ja:
   defaults:
+    edit: 編集
+    delete: 削除
+    show: 詳細
     create: 作成
     post: 投稿
     search_word: 検索ワード
+    unspecified: 指定なし
     password_reset: パスワードリセット
+    delete_confirm: 削除しますか？
     flash_message:
       created: "%{item}を作成しました"
       not_created: "%{item}を作成出来ませんでした"
@@ -42,6 +47,56 @@ ja:
     dashboards:
       index:
         title: ダッシュボード
+    users:
+      index:
+        title: ユーザー一覧
+        no_users: ユーザーがいません
+        id: ID
+        full_name: 氏名
+        role: 権限
+        created_at: 作成日時
+        avatar: アバター
+      show:
+        title: ユーザー詳細
+        id: ID
+        full_name: 氏名
+        role: 権限
+        created_at: 作成日時
+        avatar: アバター
+      edit:
+        title: ユーザー編集
+      create:
+        success: ユーザーを作成しました
+        failure: ユーザーを作成出来ませんでした
+      update:
+        success: ユーザーを更新しました
+        failure: ユーザーを更新出来ませんでした
+      destroy:
+        success: ユーザーを削除しました
+        failure: ユーザーを削除出来ませんでした
+    boards:
+      index:
+        id: ID
+        name: 作成者
+        title: 掲示板一覧
+        no_boards: 掲示板がありません
+        created_at: 作成日時
+      show:
+        id: ID
+        title: 掲示板詳細
+        full_name: 氏名
+        created_at: 作成日時
+      edit:
+        title: 掲示板編集
+      create:
+        success: 掲示板を作成しました
+        failure: 掲示板を作成出来ませんでした
+      update:
+        success: 掲示板を更新しました
+        failure: 掲示板を更新出来ませんでした
+      destroy:
+        success: 掲示板を削除しました
+        failure: 掲示板を削除出来ませんでした
   user_sessions:
     new:
       title: ログイン
