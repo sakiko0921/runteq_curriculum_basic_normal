@@ -42,7 +42,7 @@ module V3BasicRailsBasic
       # helperファイルの設定
       g.helper false
       # testファイルの設定
-      g.test false
+      g.test_framework false
       # ルーティングの記述の設定
       g.skip_routes true
     end
