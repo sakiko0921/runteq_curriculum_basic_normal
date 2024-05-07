@@ -27,6 +27,7 @@ module V3BasicRailsBasic
 
     config.time_zone = 'Tokyo'
 
+    config.active_record.default_timezone = :local
     # Configuration for the application, engines, and railties goes here.
     #
     # These settings can be overridden in specific environments using the files
@@ -41,7 +42,7 @@ module V3BasicRailsBasic
       # helperファイルの設定
       g.helper false
       # testファイルの設定
-      g.test false
+      g.test_framework false
       # ルーティングの記述の設定
       g.skip_routes true
     end

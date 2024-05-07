@@ -9,6 +9,30 @@ class User < ApplicationRecord
   validates :password_confirmation, presence: true, if: -> { new_record? || changes[:crypted_password] }
 
   validates :email, uniqueness: true, presence: true
+  validates :reset_password_token, uniqueness: true, allow_nil: true
 
   has_many :boards, dependent: :destroy
+  has_many :comments, dependent: :destroy
+  has_many :bookmarks, dependent: :destroy
+  has_many :bookmark_boards, through: :bookmarks, source: :board
+
+  mount_uploader :avatar, AvatarUploader
+
+  enum role: { general: 0, admin: 1 }
+
+  def own?(object)
+    id == object&.user_id
+  end
+
+  def bookmark(board)
+    bookmark_boards << board
+  end
+
+  def unbookmark(board)
+    bookmark_boards.destroy(board)
+  end
+
+  def bookmark?(board)
+    bookmark_boards.include?(board)
+  end
 end
